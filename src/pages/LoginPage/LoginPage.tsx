@@ -1,24 +1,21 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLock, faAt } from '@fortawesome/free-solid-svg-icons'
+// import { useState } from 'react'
+import {Link} from 'react-router-dom'
 import style from './LoginPage.module.css'
 
 import Team from '../../assets/svgs/team.svg'
 import Mobile from '../../assets/svgs/mobile.svg'
-import Logo from '../../assets/imgs/logo_purple.png'
+import Logo from '../../assets/imgs/logo_green.png'
+import Google from '../../assets/imgs/google.png'
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('')
-  const [passwd, setPasswd] = useState('')
+  const GOOGLE_CLIENT_ID = '107757984121-ri7lppilck29vrcp828kugnufjf99uls.apps.googleusercontent.com'
+  const GOOGLE_LOGIN_REDIRECT_URI = 'http://localhost:3000/login/callback'
 
-  const onLogin = async () => {
-    const response = await axios.post('/api/auth/login', { email, password: passwd })
-
-    sessionStorage.setItem('CLIENT_TOKEN', response.data.token)
-    window.location.href='/'
-  }
+  let BASE_URL = `https://accounts.google.com/o/oauth2/v2/auth`
+    BASE_URL += `?client_id=${GOOGLE_CLIENT_ID}`
+    BASE_URL += `&redirect_uri=${GOOGLE_LOGIN_REDIRECT_URI}`
+    BASE_URL += `&response_type=token`
+    BASE_URL += `&scope=email profile`
 
   return (
     <div className={style.container}>
@@ -29,16 +26,11 @@ export default function LoginPage() {
             <img className={style.logo} src={Logo} alt="" />
             <div className={style.text}>포용런</div>
           </div>
-          <div className={style.input_contain}>
-            <FontAwesomeIcon className={style.icon} icon={faAt} />
-            <input className={style.input} type="text" placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
-          </div>
-          <div className={style.input_contain}>
-            <FontAwesomeIcon className={style.icon} icon={faLock} />
-            <input className={style.input} type="text" placeholder='Password' onChange={(e) => setPasswd(e.target.value)} />
-          </div>
 
-          <button className={style.btn} onClick={onLogin}>로그인</button>
+          <a className={style.btn} href={BASE_URL}>
+            <img src={Google} alt="" className={style.google} />
+            <p className={style.p}>Google로 로그인</p>
+          </a>
 
           <Link to={'/signup'} className={style.up}>계정이 없다면?</Link>
         </div>

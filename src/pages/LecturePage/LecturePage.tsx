@@ -4,8 +4,6 @@ import { faPencil, faHashtag, faComments } from '@fortawesome/free-solid-svg-ico
 import style from './LecturePage.module.css'
 
 import BG from '../../assets/imgs/bg.png'
-// import StarFull from '../../assets/svgs/star-full.svg'
-// import StarNone from '../../assets/svgs/star-none.svg'
 
 function LecturePage () {
   const [enter, setEnter] = useState('')

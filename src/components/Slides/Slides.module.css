@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #6C63FF;
+  background: white;
+  color: #1EB79A;
 }
 
 .title {
@@ -28,16 +29,12 @@
 
 .first {
   font-size: 30px;
-  /* color: rgb(255, 154, 187); */
-  color: white;
   font-weight: 700;
   margin-bottom: -10px;
 }
 
 .last {
   font-size: 50px;
-  /* color: rgb(255, 119, 165); */
-  color: white;
   font-weight: 900;
 }
 

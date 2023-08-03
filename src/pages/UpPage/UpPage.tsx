@@ -7,7 +7,7 @@ import style from './UpPage.module.css'
 
 import Join from '../../assets/svgs/join.svg'
 import Inn from '../../assets/svgs/innov.svg'
-import Logo from '../../assets/imgs/logo_purple.png'
+import Logo from '../../assets/imgs/logo_green.png'
 
 export default function LoginPage() {
   const fileInput: any = useRef(null)

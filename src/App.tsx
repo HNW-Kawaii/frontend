@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import LecturePage from './pages/LecturePage/LecturePage'
 import UpPage from './pages/UpPage/UpPage'
 import CreatePage from './pages/CreatePage/CreatePage'
+import Callback from "./pages/Callback/Callback.tsx"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/lecture/:id' element={<LecturePage />} />
         <Route path='/create' element={<CreatePage />} />
+        <Route path='/login/callback' element={<Callback />} />
       </Routes>
     </Fragment>
   )

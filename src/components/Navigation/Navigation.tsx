@@ -5,8 +5,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios'
 import style from './Navigation.module.css'
 
-import logo from '../../assets/imgs/logo_white.png'
-import plogo from '../../assets/imgs/logo_purple.png'
+import logo from '../../assets/imgs/logo_green.png'
 
 function Navigation () {
   const [scroll, setScroll] = useState(0)
@@ -42,10 +41,8 @@ function Navigation () {
     <Fragment>
       <div className={navClass ? style.down_nav : style.nav}>
         <Link to={'/'} className={style.logo_contain}>
-          { !navClass ?
-            <img className={style.logo} src={logo} alt="" />
-          : <img className={style.logo} src={plogo} alt="" /> }
-          <div className={navClass ? style.down_title : style.title}>포용런</div>
+          <img className={style.logo} src={logo} alt="" />
+          <div className={navClass ? style.down_title : style.title}>새로운 시작<br/>포용런</div>
         </Link>
 
         <div className={style.menu}>

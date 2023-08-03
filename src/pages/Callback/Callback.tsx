@@ -21,16 +21,19 @@ export default function Callback () {
         }
 
         const accessToken = new URLSearchParams(location.search).get('access_token')
-        console.log(accessToken)
 
         if(accessToken) {
+            sessionStorage.setItem('TOKEN', accessToken)
+
             axios.get(`https://www.googleapis.com/oauth2/v2/userinfo?access_token=${accessToken}`, {
                 headers: {
                     Authorization: `Bearer ${accessToken}`,
                     Accept: 'application/json'
                 }
-            }).then(resp => console.log(resp))
-                .catch(() => console.log('oAuth token expired'))
+            }).then(resp => {
+                console.log(resp)
+                window.location.href = '/'
+            }).catch(() => console.log('oAuth token expired'))
         }
     }, [])
 

@@ -28,9 +28,9 @@ function MainPage () {
 
               <div className={style.card} onClick={() => navigate('/lecture/1')}>
                 <img className={style.thumb} src={BG} alt="" />
-                <div className={style.types}>
-                  <div className={style.type}><div className={style.offline} />오프라인 수업</div>
-                </div>
+                {/*<div className={style.types}>*/}
+                {/*  <div className={style.type}><div className={style.offline} />오프라인 수업</div>*/}
+                {/*</div>*/}
                 <div className={style.card_text}>쉽게 배우는 파이썬 강의</div>
                 <div className={style.tags}>
                   <div className={style.tag}>#프로그래밍</div>
@@ -39,14 +39,38 @@ function MainPage () {
 
               <div className={style.card} onClick={() => navigate('/lecture/1')}>
                 <img className={style.thumb} src={BG} alt="" />
-                <div className={style.types}>
-                  <div className={style.type}><div className={style.online} />온라인 수업</div>
-                </div>
+                {/*<div className={style.types}>*/}
+                {/*  <div className={style.type}><div className={style.online} />온라인 수업</div>*/}
+                {/*</div>*/}
                 <div className={style.card_text}>HTML, CSS 기초 강의</div>
                 <div className={style.tags}>
                   <div className={style.tag}>#프로그래밍</div>
                   <div className={style.tag}>#웹개발</div>
                 </div>
+              </div>
+
+              <div className={style.card} onClick={() => navigate('/lecture/1')}>
+                  <img className={style.thumb} src={BG} alt="" />
+                  {/*<div className={style.types}>*/}
+                  {/*    <div className={style.type}><div className={style.online} />온라인 수업</div>*/}
+                  {/*</div>*/}
+                  <div className={style.card_text}>React 라이브러리 강의</div>
+                  <div className={style.tags}>
+                      <div className={style.tag}>#프로그래밍</div>
+                      <div className={style.tag}>#웹개발</div>
+                  </div>
+              </div>
+
+              <div className={style.card} onClick={() => navigate('/lecture/1')}>
+                  <img className={style.thumb} src={BG} alt="" />
+                  {/*<div className={style.types}>*/}
+                  {/*    <div className={style.type}><div className={style.offline} />오프라인 수업</div>*/}
+                  {/*</div>*/}
+                  <div className={style.card_text}>Nest.js 백엔드 강의</div>
+                  <div className={style.tags}>
+                      <div className={style.tag}>#프로그래밍</div>
+                      <div className={style.tag}>#웹개발</div>
+                  </div>
               </div>
           </div>
         </div>

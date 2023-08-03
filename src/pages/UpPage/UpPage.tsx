@@ -19,7 +19,7 @@ export default function LoginPage() {
   const [birth, setBirth] = useState<any>()
   const [file, setFile] = useState<any>()
   const [fileName, setFileName] = useState('')
-  let formData = new FormData()
+  const formData = new FormData()
   
   const handleChange = async (e: any) => {
     if (!e.target.files) return

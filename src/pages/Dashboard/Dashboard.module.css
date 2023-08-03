@@ -9,10 +9,12 @@
 
 .white {
   width: 100vw;
-  height: 80px;
-  background: #6C63FF;
+  height: 120px;
+  /*background: white;*/
   z-index: 30;
   position: fixed;
+  /*background: rgb(0,0,0);*/
+  /*background: linear-gradient(180deg, rgba(0,0,0,0.6838936258096988) 0%, rgba(255,255,255,0) 100%);*/
 }
 
 .contain {
@@ -36,8 +38,8 @@
 }
 
 .img {
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
   background: rgb(246, 246, 246);
   object-fit: cover;
@@ -196,6 +198,6 @@
   background: #6C63FF;
   color: white;
   font-weight: 700;
-  font-size: 18x;
+  font-size: 14px;
   cursor: pointer;
 }
